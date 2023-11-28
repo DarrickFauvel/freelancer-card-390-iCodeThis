@@ -1,0 +1,13 @@
+[data-theme="cardtheme"] body {
+  background-color: white;
+}
+
+[data-theme="cardtheme"] .btn {
+  border-width: 2px;
+  border-color: black;
+}
+
+.clip-60 {
+  -webkit-clip-path: inset(0 60% 0 0);
+  clip-path: inset(0 60% 0 0);
+}

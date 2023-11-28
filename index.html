@@ -1,10 +1,36 @@
-<html>
+<html data-theme="light">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="icon" href="https://icodethis.com/favicon.ico" />
+    <link
+      rel="apple-touch-icon"
+      sizes="180x180"
+      href="https://icodethis.com/apple-touch-icon.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="https://icodethis.com/favicon-32x32.png"
+    />
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="16x16"
+      href="https://icodethis.com/favicon-16x16.png"
+    />
+    <link rel="manifest" href="https://icodethis.com/site.webmanifest" />
+
+    <link
+      href="https://cdn.jsdelivr.net/npm/daisyui@4.4.14/dist/full.min.css"
+      rel="stylesheet"
+      type="text/css"
+    />
 
     <!-- Remove the line below if you don't want to use TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
 
   <!-- Change code below this line -->
@@ -13,12 +39,16 @@
       class="grid sm:grid-cols-[auto,_1fr] gap-6 w-full max-w-[560px] text-violet-950 p-10 shadow-2xl rounded-md"
     >
       <!-- START column 1 -->
-      <div class="grid justify-items-center items-start content-start">
-        <img
-          class="rounded-full"
-          src="https://randomuser.me/api/portraits/women/90.jpg"
-          alt="random user 90"
-        />
+      <div class="group grid justify-items-center items-start content-start">
+        <span
+          class="rounded-full overflow-hidden -translate-y-1 transition duration-700 group-hover:translate-y-1"
+        >
+          <img
+            class="transition duration-700 group-hover:scale-125 group-hover:translate-y-3"
+            src="https://randomuser.me/api/portraits/women/90.jpg"
+            alt="random user 90"
+          />
+        </span>
 
         <!-- START stars -->
         <div class="flex mt-1">
@@ -70,24 +100,39 @@
               d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"
             />
           </svg>
-          <svg
-            class="w-4"
-            xmlns="http://www.w3.org/2000/svg"
-            width="24"
-            height="24"
-            viewBox="0 0 24 24"
-          >
-            <path
-              class="fill-slate-500"
-              fill="currentColor"
-              d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"
-            />
-          </svg>
+          <div class="relative">
+            <svg
+              class="w-4"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="fill-slate-300"
+                fill="currentColor"
+                d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"
+              />
+            </svg>
+            <svg
+              class="w-4 absolute inset-0 clip-60"
+              xmlns="http://www.w3.org/2000/svg"
+              width="24"
+              height="24"
+              viewBox="0 0 24 24"
+            >
+              <path
+                class="fill-violet-950"
+                fill="currentColor"
+                d="m5.825 22l1.625-7.025L2 10.25l7.2-.625L12 3l2.8 6.625l7.2.625l-5.45 4.725L18.175 22L12 18.275z"
+              />
+            </svg>
+          </div>
         </div>
         <!-- END stars -->
 
-        <span class="block bg-green-600 text-white text-xs rounded-md px-1"
-          >4.3</span
+        <span class="block bg-green-600 text-white text-xs rounded-md px-1 tracking-wide"
+          >4.4</span
         >
       </div>
       <!-- END column 1 -->
@@ -95,7 +140,9 @@
       <!-- START column 2 -->
       <article>
         <section class="grid place-items-center sm:place-items-start">
-          <h1 class="text-2xl font-semibold mt-6">Debra Bellamy</h1>
+          <h1 class="text-2xl font-semibold mt-3 max-[340px]:mt-3">
+            Debra Bellamy
+          </h1>
           <span class="font-semibold text-gray-400">.Net Developer</span>
         </section>
 
@@ -106,7 +153,7 @@
           <!-- START website link -->
           <a class="group flex items-center gap-1" href="#">
             <svg
-              class="w-5 h-5 mt-1 transition duration-300 group-hover:scale-150"
+              class="w-5 h-5 mt-1 transition duration-500 group-hover:scale-150"
               xmlns="http://www.w3.org/2000/svg"
               width="256"
               height="256"
@@ -118,7 +165,7 @@
               />
             </svg>
             <span
-              class="transition duration-300 hover:underline hover:underline-offset-2 hover:translate-x-1"
+              class="transition duration-500 group-hover:underline group-hover:underline-offset-2 group-hover:translate-x-1"
             >
               aegelsbridal.com
             </span>
@@ -128,7 +175,7 @@
           <!-- START socials -->
           <div class="flex gap-3 max-[340px]:place-content-center">
             <a
-              class="text-blue-700 transition duration-300 hover:scale-150"
+              class="text-blue-700 transition duration-500 hover:scale-150 hover:translate-x-1"
               href="#"
             >
               <svg
@@ -145,7 +192,7 @@
               </svg>
             </a>
             <a
-              class="text-blue-700 transition duration-300 hover:scale-150"
+              class="text-blue-700 transition duration-500 hover:scale-150"
               href="#"
             >
               <svg
@@ -161,7 +208,7 @@
               </svg>
             </a>
             <a
-              class="text-red-700 transition duration-300 hover:scale-150"
+              class="text-red-700 transition duration-500 hover:scale-150 hover:-translate-x-1"
               href="#"
             >
               <svg
@@ -182,12 +229,12 @@
         <!-- END links -->
 
         <!-- START stats -->
-        <section class="grid grid-cols-2 border-y-[1px] py-4 mt-6">
-          <div class="grid">
+        <section class="grid grid-cols-2 gap-4 border-y-[1px] py-4 mt-6">
+          <div class="grid text-center sm:text-start">
             <span class="text-2xl font-semibold">24</span>
             <span class="font-semibold">Jobs Completed</span>
           </div>
-          <div class="grid">
+          <div class="grid text-center sm:text-start">
             <span class="text-2xl font-semibold">89%</span>
             <span class="font-semibold">On Time</span>
           </div>
@@ -195,28 +242,49 @@
         <!-- END stats -->
 
         <p class="mt-5 leading-5">
-          I am an experienced academic writer with vast skills to research in
+          I am an experienced academic writer with vast skills in researching
           different fields. My majors include Business Studies, English,
           History, Management, Psychology, and Sociology.
         </p>
 
         <!-- START buttons -->
-        <section class="flex gap-4 mt-8 mb-4">
-          <a
-            class="px-5 py-3 bg-orange-400 rounded-md text-white font-semibold transition duration-300 hover:bg-violet-900"
-            href="#"
-            >Hire Debra</a
+        <section class="flex justify-center sm:justify-start gap-4 mt-8 mb-4">
+          <button
+            class="px-5 py-3 bg-orange-400 rounded-md text-white font-semibold transition duration-500 hover:bg-violet-900 hover:-translate-y-[2px] hover:drop-shadow-lg"
+            onclick="goToUrl('https://darrickdevelops.com')"
           >
-          <a
-            class="px-5 py-3 rounded-md text-gray-400 font-semibold transition duration-300 hover:text-violet-950"
-            href="#"
-            >Add to favorites</a
+            Hire Debra
+          </button>
+          <button
+            class="px-5 py-3 rounded-md bg-white text-gray-400 font-semibold transition duration-500 hover:text-violet-950 hover:-translate-y-[2px] hover:drop-shadow-lg"
+            onclick="favoritesModal.showModal()"
           >
+            Add to favorites
+          </button>
+          <dialog id="favoritesModal" class="modal modal-bottom sm:modal-middle">
+            <div class="modal-box">
+              <h3 class="font-bold text-lg">Added to favorites!</h3>
+              <p class="py-4">
+                <span class="text-red-400 bg-yellow-100 p-2 rounded-sm">Well, not really. This is just a demo.</span>
+                <br>
+                <br>
+                <p>Press ESC key or click the button below to close.</p>
+              </p>
+              <div class="modal-action">
+                <form method="dialog">
+                  <!-- if there is a button in form, it will close the modal -->
+                  <button class="btn">Close</button>
+                </form>
+              </div>
+            </div>
+          </dialog>
         </section>
         <!-- END buttons -->
       </article>
       <!-- END column 2 -->
     </section>
+
+    <script src="script.js"></script>
   </body>
   <!-- Change code above this line -->
 </html>
