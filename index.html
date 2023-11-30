@@ -2,31 +2,6 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="icon" href="https://icodethis.com/favicon.ico" />
-    <link
-      rel="apple-touch-icon"
-      sizes="180x180"
-      href="https://icodethis.com/apple-touch-icon.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="32x32"
-      href="https://icodethis.com/favicon-32x32.png"
-    />
-    <link
-      rel="icon"
-      type="image/png"
-      sizes="16x16"
-      href="https://icodethis.com/favicon-16x16.png"
-    />
-    <link rel="manifest" href="https://icodethis.com/site.webmanifest" />
-
-    <link
-      href="https://cdn.jsdelivr.net/npm/daisyui@4.4.14/dist/full.min.css"
-      rel="stylesheet"
-      type="text/css"
-    />
 
     <!-- Remove the line below if you don't want to use TailwindCSS -->
     <script src="https://cdn.tailwindcss.com"></script>
@@ -34,9 +9,10 @@
   </head>
 
   <!-- Change code below this line -->
-  <body class="flex justify-center items-center min-h-screen">
+  <body class="flex justify-center items-center bg-white min-h-screen transition duration-1000">
     <section
-      class="grid sm:grid-cols-[auto,_1fr] gap-6 w-full max-w-[560px] text-violet-950 p-10 shadow-2xl rounded-md"
+      class="grid sm:grid-cols-[auto,_1fr] gap-6 bg-white w-full max-w-[560px] text-violet-950 p-10 shadow-2xl rounded-md"
+      id="card"
     >
       <!-- START column 1 -->
       <div class="group grid justify-items-center items-start content-start">
@@ -151,7 +127,7 @@
           class="flex justify-between mt-3 font-semibold max-[340px]:grid max-[340px]:place-content-center"
         >
           <!-- START website link -->
-          <a class="group flex items-center gap-1" href="#">
+          <a class="group flex items-center gap-1" href="#" id="website">
             <svg
               class="w-5 h-5 mt-1 transition duration-500 group-hover:scale-150"
               xmlns="http://www.w3.org/2000/svg"
@@ -175,8 +151,9 @@
           <!-- START socials -->
           <div class="flex gap-3 max-[340px]:place-content-center">
             <a
-              class="text-blue-700 transition duration-500 hover:scale-150 hover:translate-x-1"
+              class="text-blue-700 transition duration-500 hover:scale-150 hover:-translate-x-1"
               href="#"
+              id="linkedin"
             >
               <svg
                 class="w-5 -mt-[1px]"
@@ -192,8 +169,9 @@
               </svg>
             </a>
             <a
-              class="text-blue-700 transition duration-500 hover:scale-150"
+              class="text-blue-700 transition duration-500 hover:scale-150 hover:-translate-x-1"
               href="#"
+              id="behance"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -210,6 +188,7 @@
             <a
               class="text-red-700 transition duration-500 hover:scale-150 hover:-translate-x-1"
               href="#"
+              id="google-plus"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -249,18 +228,20 @@
 
         <!-- START buttons -->
         <section class="flex justify-center sm:justify-start gap-4 mt-8 mb-4">
-          <button
+          <a
             class="px-5 py-3 bg-orange-400 rounded-md text-white font-semibold transition duration-500 hover:bg-violet-900 hover:-translate-y-[2px] hover:drop-shadow-lg"
-            onclick="goToUrl('https://darrickdevelops.com')"
+            href="#"
+            id="hire-button"
           >
             Hire Debra
-          </button>
-          <button
-            class="px-5 py-3 rounded-md bg-white text-gray-400 font-semibold transition duration-500 hover:text-violet-950 hover:-translate-y-[2px] hover:drop-shadow-lg"
-            onclick="favoritesModal.showModal()"
+          </a>
+          <a
+          class="px-5 py-3 rounded-md bg-white text-gray-400 font-semibold transition duration-500 hover:text-violet-950 hover:-translate-y-[2px] hover:drop-shadow-lg"
+          href="#"
+          id="favorites-button"
           >
             Add to favorites
-          </button>
+          </a>
           <dialog id="favoritesModal" class="modal modal-bottom sm:modal-middle">
             <div class="modal-box">
               <h3 class="font-bold text-lg">Added to favorites!</h3>
