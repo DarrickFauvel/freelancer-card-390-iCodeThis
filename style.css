@@ -3,3 +3,7 @@
   -webkit-clip-path: inset(0 60% 0 0);
   clip-path: inset(0 60% 0 0);
 }
+
+.drop-scale {
+  transform: scale(1.25) translateY(12px);
+}

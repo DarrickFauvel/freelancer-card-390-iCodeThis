@@ -1,3 +1,4 @@
+const avatar = document.querySelector("#avatar")
 const hireButton = document.querySelector("#hire-button")
 
 // Prevent default behavior on all # links
@@ -9,12 +10,14 @@ document.querySelectorAll('a[href="#"]').forEach((link) => {
 })
 
 function changeBodyBackground() {
+  avatar.classList.toggle("drop-scale")
   document.body.style.backgroundColor = "rebeccapurple"
 }
 
-function restorBodyBackground() {
+function restoreBodyBackground() {
+  avatar.classList.toggle("drop-scale")
   document.body.style.backgroundColor = "white"
 }
 
 hireButton.addEventListener("mouseenter", changeBodyBackground)
-hireButton.addEventListener("mouseleave", restorBodyBackground)
+hireButton.addEventListener("mouseleave", restoreBodyBackground)
